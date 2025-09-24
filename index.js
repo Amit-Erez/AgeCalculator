@@ -45,6 +45,10 @@ document.getElementById("calcBtn").addEventListener("click", () => {
   const monthError = document.getElementById("month__error")
   const yearError = document.getElementById("year__error")
 
+  const labelDay = document.getElementById("labelDay");
+  const labelMonth = document.getElementById("labelMonth");
+  const labelYear = document.getElementById("labelYear");
+
   const yearOk = validateField(yearInput, labelYear, yearError, [
     { check: v => v !== "", msg: "This field is required" },
     { check: v => !isNaN(v) && +v >= 0, msg: "Must be a valid year" }
