@@ -21,9 +21,9 @@ function validateField(input, label, errorBox, rules) {
 }
 
 function setResult(duration) {
-  const answerYears = duration.years;
-  const answerMonths = duration.months;
-  const answerDays = duration.days;
+  const answerYears = !duration.years ?  0  : duration.years;
+  const answerMonths = !duration.months ?  0  : duration.months;
+  const answerDays = !duration.days ? 0 : duration.days;
   document.getElementById("purpleY").textContent = answerYears;
   document.getElementById("purpleM").textContent = answerMonths;
   document.getElementById("purpleD").textContent = answerDays;
